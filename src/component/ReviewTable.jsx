@@ -14,7 +14,7 @@ function ReviewTable() {
             formData.append("userId", userId);
 
 
-            const fetchedData = await fetch("http://localhost:5000/user/status", {
+            const fetchedData = await fetch("https://wasserstoff-backendtask-35f0.onrender.com/user/status", {
                 method: "POST",
                 headers: {
                     "Authorization": "Bearer " + localStorage.getItem("token"),

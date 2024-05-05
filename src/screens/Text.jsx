@@ -23,7 +23,7 @@ function Text() {
         const formData = new FormData();
         formData.append("image",selectedImage);
 
-        const uploaded = fetch("http://localhost:5000/user/insertImage",{
+        const uploaded = fetch("https://wasserstoff-backendtask-35f0.onrender.com/user/insertImage",{
             method:"POST",
             body:formData
         });

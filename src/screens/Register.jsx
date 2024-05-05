@@ -39,7 +39,7 @@ const Register = () => {
 
 
 
-    const savedUSer = fetch("http://localhost:5000/user/register", {
+    const savedUSer = fetch("https://wasserstoff-backendtask-35f0.onrender.com/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -37,7 +37,7 @@ const Dashboard = () => {
     formData.append("userId", userId);
 
     try {
-      const response = await fetch("http://localhost:5000/user/insertImage", {
+      const response = await fetch("https://wasserstoff-backendtask-35f0.onrender.com/user/insertImage", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -76,7 +76,7 @@ const Dashboard = () => {
             />
             <div className="card-body">
               <h1 className="font-bold pb-8">Image Annotation</h1>
-              <p className=" font-bold pb-2"> Please upload 50 to 60000 Mb size photos only!! </p>
+              <p className=" font-bold pb-2"> Please upload 50 to 16000 px size photos only!! </p>
               <span>Check the result in review image status for annotation</span>
               <button className="flex items-center justify-center space-x-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
                 onClick={() => setOpen(!open)}
