@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {BASE_URL} from "../constants/env"
 import { FaCloudUploadAlt } from "react-icons/fa";
 import AuthGuard from "../component/AuthGuard";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -37,7 +37,7 @@ const Dashboard = () => {
     formData.append("userId", userId);
 
     try {
-      const response = await fetch("https://wasserstoff-backendtask-35f0.onrender.com/user/insertImage", {
+      const response = await fetch(`${BASE_URL}/user/insertImage`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

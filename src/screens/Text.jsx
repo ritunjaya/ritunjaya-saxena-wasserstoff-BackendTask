@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BASE_URL } from '../constants/env';
 
 function Text() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -23,7 +24,7 @@ function Text() {
         const formData = new FormData();
         formData.append("image",selectedImage);
 
-        const uploaded = fetch("https://wasserstoff-backendtask-35f0.onrender.com/user/insertImage",{
+        const uploaded = fetch(`${BASE_URL}/user/insertImage`,{
             method:"POST",
             body:formData
         });

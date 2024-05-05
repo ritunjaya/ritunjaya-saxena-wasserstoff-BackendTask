@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Cover_Image from '../assets/back.jpeg';
 import { useNavigate } from "react-router";
-
+import {BASE_URL} from "../constants/env"
 
 
 const Register = () => {
@@ -39,7 +39,7 @@ const Register = () => {
 
 
 
-    const savedUSer = fetch("https://wasserstoff-backendtask-35f0.onrender.com/user/register", {
+    const savedUSer = fetch(`${BASE_URL}/user/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

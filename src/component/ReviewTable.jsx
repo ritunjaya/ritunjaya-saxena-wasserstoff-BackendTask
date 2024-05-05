@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
+import {BASE_URL} from "../constants/env"
 import CustomTable, { CustomTableRow } from "./CustomTable";
 function ReviewTable() {
 
@@ -14,7 +15,7 @@ function ReviewTable() {
             formData.append("userId", userId);
 
 
-            const fetchedData = await fetch("https://wasserstoff-backendtask-35f0.onrender.com/user/status", {
+            const fetchedData = await fetch(`${BASE_URL}/user/status`, {
                 method: "POST",
                 headers: {
                     "Authorization": "Bearer " + localStorage.getItem("token"),

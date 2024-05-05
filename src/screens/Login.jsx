@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Cover_Image from '../assets/back.jpeg';
 import GOOGLE_ICON from '../assets/g.png';
 import { Link } from "react-router-dom";
+import {BASE_URL} from "../constants/env"
 
 
 const Login = () => {
@@ -31,7 +32,7 @@ const Login = () => {
       alert("email or password not found");
     }
 
-    const response = await fetch("https://wasserstoff-backendtask-35f0.onrender.com/user/login", {
+    const response = await fetch(`${BASE_URL}/user/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
