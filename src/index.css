@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/screens';
+@import 'tailwindcss/utilities';
+
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    scrollbar-width: none; 
+  }
